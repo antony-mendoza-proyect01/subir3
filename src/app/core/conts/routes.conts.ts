@@ -1,0 +1,18 @@
+// STRING DE LA NAVEGACION
+export const ROUTES_PATHS = {
+  LOGEAR: 'login',
+  PADRE: 'home',
+  CRUD: {
+    DEFAULT: 'crud',
+    PROYECTO: 'negocios',
+  }
+};
+
+// RUTAS DE LA NAVEGACION
+export const INTERNAL_PATHS = {
+  LOGEAR: `${ROUTES_PATHS.LOGEAR}`,
+  PADRE: `${ROUTES_PATHS.PADRE}`,
+
+  CRUD: `${ROUTES_PATHS.CRUD.DEFAULT}`,
+  CRUD_PROYECTO: `${ROUTES_PATHS.CRUD.PROYECTO}`,
+};

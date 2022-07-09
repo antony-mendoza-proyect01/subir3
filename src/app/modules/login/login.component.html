@@ -1,0 +1,47 @@
+
+<div class="d-flex w-100 h-100">
+  <div>
+    <img src="https://imagenpng.com/wp-content/uploads/2017/01/01C.jpg" alt="">
+  </div>
+
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+
+
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+    <label class="text-white" for="usuario">Usuario</label>
+    <input type="text"
+           formControlName="usuario"
+           class="form-control" [ngClass]="{ 'is-invalid': submitted && f.usuario.errors }"
+           placeholder="Email or Phone"
+           id="usuario">
+    <div *ngIf="submitted && f.usuario.errors" class="invalid-feedback">
+      <div *ngIf="f.usuario.errors.required">Usuario es requerido</div>
+    </div>
+
+    <label  class="text-white"  for="password">Contraseña</label>
+    <input type="password"
+           formControlName="password"
+           placeholder="password" id="password">
+    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+      <div *ngIf="f.password.errors.required">Contraseña es requerida</div>
+    </div>
+
+    <button
+      [disabled]="registerForm.invalid"
+      class="btn btn-primary mt-3 w-100 p-3">
+      <span class="text-white font-weight-bold">Iniciar sesión</span>
+    </button>
+
+  </form>
+
+</div>
+
+
+
+
+
+
